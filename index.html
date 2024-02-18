@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eczar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>E-Ticaret Sitesi</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .container{
+            height: 100%;
+            width: 100%;
+        }
+
+        header{
+            border: solid;
+            color: gray;
+            background-color: gray;
+            height: 100px;
+        }
+
+        .btn{
+            float: right;
+            margin: 25px;
+        }
+
+        .form{
+            color: black;
+            font-size: 19px;
+            margin: 8px;
+        }
+
+        input{
+            font-size: 15px;
+        }
+
+        .baslik{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            height: 90px;
+            width: 450px;
+            margin: 5px 10px 5px 45px;
+        }
+
+        .text1{
+            font-size: 50px;
+            color: black;
+            text-align: center;
+            align-items: center;
+            margin: 20px 65 20px 65px ;
+            font-family: 'Eczar', serif;
+            text-shadow: -13px 14px 1px rgba(0,0,0,0.13);
+            box-shadow: 10px 10px 10px 10px rgba(0,1,1,0.13);
+        }
+
+        img{
+            width: 700px;
+            display: block;
+            float: left;
+            border-radius: 60%;
+            margin: 70px 0px 50px 150px;
+        }
+
+        .container-fluid{
+            text-align: center;
+            margin: 250px 0 0 0;  
+        }
+
+        .btn2{
+            font-size: 35px;
+            color: black;
+            background-color: wheat;
+            border-radius: 13px;
+            font-family: 'Architects Daughter', cursive;
+            text-shadow: -13px 14px 1px rgba(0,0,0,0.13);
+            cursor: pointer;
+        }
+
+
+        #btn8{
+            cursor: pointer;
+            color: goldenrod;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .div-1{
+            margin: 10px;
+        }
+
+        i{
+            margin-left: 5px
+        }
+
+        .div-inclusive{
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .icons{
+            font-size: 30px;
+            color: rgb(179, 179, 220);
+            display: flex;
+            justify-content: center;
+        }
+
+        .is{
+            margin: 15px;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="baslik">
+                <p class="text1"><strong>Rolex Watch<i class="fa-solid fa-crown" style="color: #000000; margin: 8px;"></i></strong></p>
+            </div>
+            <div class="btn"> 
+            <form>
+                <label for="name" class="form">E-Posta:</label>
+                <input type="text" id="name" name="isim" placeholder="e-postadresi@gamil.com">
+                <label for="pwd" class="form">Şifre:</label>
+                <input type="password" id="pwd" name="pwd" placeholder="Şifrenizi giriniz">
+                <button style="background-color: darkgoldenrod; cursor: pointer; margin: 5px; font-size: 15px;">Giriş Yap</button>
+                <select style="background-color: gray; margin: 7px;">
+                    <option value="turkce">TUR</option>
+                    <option value="english">ENG</option>
+                    <option value="espanol">FR</option>
+                    <option value="deutsch">DE</option>
+                  </select>
+            </form>
+            </div>
+            
+        </header>
+
+        <div class="img">
+            <img src="./images/img2.jpg">
+        </div>
+        
+        <div class="container-fluid">
+            <button class="btn2"><a href="homepage.html" style="text-decoration: dashed;  color: black;">Anasayfaya Git</a></button>
+        </div>
+        <div class="div-inclusive">
+            <div class="div-1">
+                <button type="button" id="btn8">Müşteri Hizmetleri<i class="fas fa-angle-down"></i></button>
+             </div>
+             <div class="div-1">
+                <button type="button" id="btn8">Hakkımızda<i class="fas fa-angle-down"></i></button>
+             </div>
+             <div class="div-1">
+                <button type="button" id="btn8">İletişim<i class="fas fa-angle-down"></i></button>
+             </div>
+        </div>
+        <div class="icons">
+            <i class="fa-brands fa-instagram is"></i>
+            <i class="fa-brands fa-linkedin is"></i>
+            <i class="fa-brands fa-x-twitter is"></i>
+            <i class="fa-brands fa-facebook is"></i>
+        </div>
+        
+    </div>
+</body>
+</html>
+
