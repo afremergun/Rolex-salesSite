@@ -12,6 +12,7 @@
        body{
         display: flex;
         flex-wrap: wrap;
+        background-color: beige;
        }
 
         *{
@@ -34,12 +35,12 @@
         }
 
         .duvar{
-          margin: 0 150px 0 190px;
+          margin: 0 90px 0 290px;
         }
 
         .wall{
           display: inline-block;
-          margin: 40px 35px 0 0;
+          margin: 50px 30px 0 0;
         }
 
 
@@ -90,7 +91,7 @@
         .container-fluid{
           height: 70px;
           width: 100%;
-          background-color: rgb(57, 55, 169);
+          background-color: #e5a260;
         }
 
         .input{
@@ -134,11 +135,77 @@
         .shopping-cart-list .list-item{
           margin-top: 1rem;
         }
+
+        #left-panel {
+          position: absolute;
+          background-color: #e5a260;
+          left: 0;
+          width: 15%;
+          height: 1500px;
+          top: 128%;
+          transform: translateY(-50%);
+          padding: 10px;
+          border-radius: 0 15px 15px 0; 
+        }
+
+        #left-panel ul {
+          list-style: none;
+          padding: 0;
+          margin: 10px 0;
+        }
+
+        #left-panel li a {
+          color: black;
+          text-decoration: none;
+          display: block;
+          margin: 30px 20px;
+          font-weight: 500;
+        }
+        
+        .text-z{
+          font-size: 200px;
+          font-weight: 600;
+          color: #dbd8e3;
+          z-index: -1;
+          display: flex;
+          position: absolute;
+          left: 15%;
+          top: 48%;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          text-shadow: 5px 5px 5px 10px ;
+          transform: scaleY(1);
+          opacity: 1;
+          filter: blur(1px);
+          -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+          mask-image: linear-gradient(to bottom, red 40%, transparent 100%);
+        }
+
+        .text-y{
+          font-size: 200px;
+          font-weight: 600;
+          color: #dbd8e3;
+          z-index: -1;
+          display: flex;
+          position: absolute;
+          left: 30%;
+          top: 155%;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          text-shadow: 5px 5px 5px 10px ;
+          transform: scaleY(-1);
+          opacity: 1;
+          filter: blur(1px);
+          -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+          mask-image: linear-gradient(to bottom, red 40%, transparent 100%);
+        }
         
     </style>
 </head>
 <body>
     <div>
+      <div>
+        <p class="text-z">R O L E X</p>
+        <p class="text-y">R O L E X</p>
+      </div>
           <header class="bg-black container-fluid py-2">
             <nav class="container justify-content-between align-items-center px-5 d-sm-flex d-none">
               <div>
@@ -163,14 +230,26 @@
           </header>
           <div class="container-fluid">
             <div class="in-1">
+              <span class="dropdown" id="span"><a class="dp-btn" href="#" title="Siparişlerim">siparişlerim <i class="fas fa-angle-down"></i></a></span>
               <span class="dropdown" id="span"><a class="dp-btn" href="#" title="Filtrele">Filtrele<i class="fas fa-angle-down"></i></a></span>
               <span class="dropdown" id="span"><a class="dp-btn" href="#" title="Katalog">Katalog<i class="fas fa-angle-down"></i></a></span>
               <span class="dropdown" id="span"><a class="dp-btn" href="#" title="Filtrele">Sırala<i class="fas fa-angle-down"></i></a></span>
                 <div class="shopping-cart-list bg-black d-none" style="right: 130px; margin: 7px;">
                   <b class="fs-5 text-white my-5">Alışveriş sepeti</b>
                 </div>
-              <input type="text" name="search" placeholder="Ara" class="input"><i class="fa-solid fa-magnifying-glass fs-5" style="color: burlywood;"></i>
+              <input type="text" name="search" placeholder="Ara" class="input"><i class="fa-solid fa-magnifying-glass fs-5" style="color: black;"></i>
             </div>
+          </div>
+          <div id="left-panel">
+            <ul>
+              <li><a href="#">Süper Teklifler<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+              <li><a href="#">Kampanyalar<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+              <li><a href="#">Kategoriler<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+              <li><a href="#">Bildir<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+              <li><a href="#">İletişim<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+              <li><a href="#">Sorular<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+              <li><a href="#">Canlı Destek<i class="fa-solid fa-caret-right" style="font-size: 17px;"></i></a></li>
+            </ul>
           </div>
             <div class="duvar">
                 <div class="wall">
@@ -178,7 +257,7 @@
                     <center><img src="./images/ürün-1.jpeg" class="product"></center>
                     <p class="title">Rolex Datejust 36 Jübilee 126231 Rose Gold Motif Dial <br><span class="price">13.499$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Model Kasası: Oyster, 36 mm, Oystersteel çelik ve Everose altın1.
@@ -199,7 +278,7 @@
                     <center><img src="./images/urun-2.jpg" class="product"></center>
                     <p class="title">SUPER CLONE ETA ROLEX SUBMARINER<br><span class="price">8749$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -213,7 +292,7 @@
                     <center><img src="./images/urun-3.jpg" class="product"></center>
                     <p class="title">ETA KORDON ROLEX DAY-DATE ROSE GOLD<br><span class="price">7319$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -227,7 +306,7 @@
                     <center><img src="./images/urun-4.jpg" class="product"></center>
                     <p class="title">ROLEX YENİ SKY DWELLER ROSE ALTIN MAVİ KADRAN NASYONEL<br><span class="price">9990$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -241,7 +320,7 @@
                     <center><img src="./images/urun-5.png" class="product" style="width: 150px;"></center>
                     <p class="title">ROLEX YENİ SKY DWELLER ROSE ALTIN MAVİ KADRAN NASYONEL<br><span class="price">16.899$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -255,7 +334,7 @@
                     <center><img src="./images/urun-6.jpeg" class="product" style="width: 155px;"></center>
                     <p class="title">Rolex Day Just Bayan Saat ve Day Date Erkek Saat Kombini<br><span class="price">1149$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -269,7 +348,7 @@
                     <center><img src="./images/urun-7.jpeg" class="product" style="width: 140px;"></center>
                     <p class="title">RAİTOWN ÇOK FONKSİYONLU ANALOG KUVARS/YEŞİL BİLEKLİK<br><span class="price">1299$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -283,7 +362,7 @@
                     <center><img src="./images/urun-8.jpeg" class="product" style="width: 160px;"></center>
                     <p class="title">Rolex Eta Saat Gökkuşağı Bezel  <br>Gold Kasa 4130<br><span class="price">1500$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -297,7 +376,7 @@
                     <center><img src="./images/urun-9.webp" class="product" style="width: 160px;"></center>
                     <p class="title">Rolex GMT-Master II (126720VTNR) <br><span class="price">29.411$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -311,7 +390,7 @@
                     <center><img src="./images/urun-10.webp" class="product" style="width: 118px;"></center>
                     <p class="title">AUDEMARS GUET ROYAL OAK SELFWİNDİNG<br><span class="price">41.500$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-black rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -325,7 +404,7 @@
                     <center><img src="./images/urun-11.jpg" class="product"></center>
                     <p class="title">Rolex Daytona Platinum 116506<br><span class="price">60.000$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -339,7 +418,7 @@
                     <center><img src="./images/urun-12.jpg" class="product"></center>
                     <p class="title">Rolex Daytone 126505 Rosegold<br><span class="price">22.000$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -353,7 +432,7 @@
                     <center><img src="./images/urun-13.jpg" class="product" style="width: 185px;"></center>
                     <p class="title">ROLEX COSMOGRAPH DAYTONA ROSE ALTIN KAHVE 116506<br><span class="price">18.400$</span></p>
                     <div class="btn-2">
-                      <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                      <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                       <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                         <div class="dp-content">
                           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -367,7 +446,7 @@
                       <center><img src="./images/urun-14.jpg" class="product"></center>
                       <p class="title">Rolex Daytona John Mayer<br><span class="price">12.499$</span></p>
                       <div class="btn-2">
-                        <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                        <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                         <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                           <div class="dp-content">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -381,7 +460,7 @@
                       <center><img src="./images/urun-15.jpg" class="product" style="width: 180px;"></center>
                       <p class="title">ŞADAN SAAT - DAY-DATE ROSE ALTIN PIRLANTALI 36mm<br><span class="price">22.000$</span></p>
                       <div class="btn-2">
-                        <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                        <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                         <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                           <div class="dp-content">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
@@ -395,7 +474,7 @@
                         <center><img src="./images/urun-16.jpg" class="product" style="width: 175px;"></center>
                         <p class="title">Rolex Daytona Rose Baguette Pırlanta<br><span class="price">10.380$</span></p>
                         <div class="btn-2">
-                          <button class="btn6 bg-black text-white rounded-pill">Sepete Ekle</button>
+                          <button class="btn6 bg-bisque text-balck rounded-pill">Sepete Ekle</button>
                           <span class="dropdown"><a class="dp-btn" href="#" title="Hakkında">Daha Fazla<i class="fas fa-angle-down" style="margin-left: 1px;vertical-align: middle;"></i></a>
                             <div class="dp-content">
                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, rem mollitia non impedit nesciunt minima facilis suscipit veritatis esse, perferendis consectetur eius odio. Explicabo ratione natus neque, vero tempora ducimus.
