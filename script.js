@@ -1,4 +1,3 @@
-// Ürün bilgilerini tutan sınıf
 class ShoppingItem {
     constructor(image, title, price) {
         this.image = image;
@@ -7,14 +6,12 @@ class ShoppingItem {
     }
 }
 
-// UI işlemlerini yöneten sınıf
 class UI {
     constructor() {
         this.cartList = document.querySelector(".shopping-cart-list");
         this.itemCount = document.getElementById("item-count");
     }
 
-    // Sepete yeni bir ürün ekler
     addToCart(item) {
         const listItem = document.createElement("div");
         listItem.classList.add("list-item");
@@ -39,23 +36,19 @@ class UI {
         this.updateCartCount();
     }
 
-    // Sepetten bir ürünü kaldırır
     removeCartItem(event) {
         event.target.closest('.list-item').remove();
         this.updateCartCount();
     }
 
-    // Sepetteki ürün sayısını günceller
     updateCartCount() {
         const cartItems = this.cartList.getElementsByClassName('list-item');
         this.itemCount.textContent = cartItems.length;
     }
 }
 
-// UI sınıfının bir örneğini oluştur
 const ui = new UI();
 
-// Sepete ekleme butonlarına tıklandığında çalışacak fonksiyon
 function addToCartEvent() {
     const addToCartButtons = document.getElementsByClassName("btn6");
     for (let button of addToCartButtons) {
@@ -73,7 +66,6 @@ function addToCartEvent() {
     }
 }
 
-// Sepeti göster/gizle butonu için olay dinleyicisi
 function cartToggle() {
     const btnCart = document.querySelector(".btn-cart");
     btnCart.addEventListener("click", function() {
@@ -81,7 +73,6 @@ function cartToggle() {
     });
 }
 
-// Sepetten ürün kaldırma butonları için olay dinleyicisi
 function removeCartItemEvent() {
     document.addEventListener('click', function(event) {
         if (event.target.classList.contains('btn-delete')) {
@@ -90,12 +81,10 @@ function removeCartItemEvent() {
     });
 }
 
-// Uygulama başlatıldığında çalışacak fonksiyonlar
 function initializeApp() {
     addToCartEvent();
     cartToggle();
     removeCartItemEvent();
 }
 
-// Uygulamayı başlat
 initializeApp();
